@@ -1,53 +1,47 @@
 {
-  "name": "nabha-shiksha-client",
+  "name": "nabha-shiksha-ai",
   "version": "1.0.0",
-  "private": true,
-  "homepage": "https://prabhu-bit.github.io/Digital-platform-for-students/", 
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^14.5.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "react-router-dom": "^6.15.0",
-    "axios": "^1.5.0",
-    "web-vitals": "^2.1.4",
-    "@tensorflow/tfjs": "^4.15.0",
-    "react-speech-kit": "^2.0.5",
-    "react-audio-voice-recorder": "^2.0.0",
-    "react-hot-toast": "^2.4.1",
-    "lucide-react": "^0.263.1",
-    "framer-motion": "^10.16.4",
-    "react-intersection-observer": "^9.5.2"
-  },
+  "description": "AI-powered digital learning platform for rural students in Punjabi",
+  "main": "server/index.js",
+  "homepage": "https://prabhu-bit.github.io/Digital-platform-for-students/",
   "scripts": {
-  "start": "react-scripts start",
-  "build": "react-scripts build",
-  "test": "react-scripts test",
-  "eject": "react-scripts eject",
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
-},
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "start": "node server/index.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server/index.js",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "install-all": "npm install && cd client && npm install"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "@tensorflow/tfjs": "^4.22.0",
+    "@tensorflow/tfjs-node": "^4.15.0",
+    "compression": "^1.7.4",
+    "compromise": "^14.10.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "helmet": "^7.0.0",
+    "multer": "^1.4.5-lts.1",
+    "natural": "^6.7.0",
+    "node-cron": "^3.0.2",
+    "openai": "^4.20.1",
+    "sentiment": "^5.0.2",
+    "sqlite3": "^5.1.6",
+    "uuid": "^9.0.1"
   },
-  "proxy": "http://localhost:5000"
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "gh-pages": "^6.3.0",
+    "nodemon": "^3.0.1"
+  },
+  "keywords": [
+    "education",
+    "ai",
+    "punjabi",
+    "offline-first",
+    "voice-recognition",
+    "rural-education"
+  ],
+  "author": "Nabha Shiksha Team",
+  "license": "MIT"
 }
-
-
