@@ -10,7 +10,9 @@
     "server": "nodemon server/index.js",
     "client": "cd client && npm start",
     "build": "cd client && npm run build",
-    "install-all": "npm install && cd client && npm install"
+    "install-all": "npm install && cd client && npm install",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d client/build"
   },
   "dependencies": {
     "@tensorflow/tfjs": "^4.22.0",
@@ -45,3 +47,4 @@
   "author": "Nabha Shiksha Team",
   "license": "MIT"
 }
+
