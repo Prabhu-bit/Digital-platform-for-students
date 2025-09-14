@@ -2,7 +2,6 @@ const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
 const compression = require('compression');
-const path = require('path');
 require('dotenv').config();
 
 const app = express();
@@ -71,3 +70,4 @@ app.listen(PORT, () => {
 });
 
 module.exports = app;
+
